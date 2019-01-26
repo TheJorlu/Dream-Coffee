@@ -1,0 +1,284 @@
+title: ¡Buenos días!
+tags: 
+colorID: 0
+position: 1676,-281
+---
+<<rateCoffee CoffeeMeter 0>>
+<<setImage MainImage sol>>
+<<callAudio SoundEffector pajaros>>
+El sol sale, los pájaros cantan. 
+Después de una reconfortante noche de sueño me despierto con la emoción de preparar mi café favorito.
+Me levanto y voy a la cocina
+Mi ritual mañanero es tan emocionante como siempre, me acerco a la alacena y la abro para elegir el tipo de café que me voy a preparar
+<<setOptions OptionButtons 3>>
+[[Café Instantáneo|Instantaneo]]
+[[Café Molido|Molido]]
+[[Café en Grano|Grano]]
+===
+title: Instantaneo
+tags: 
+colorID: 0
+position: 1229,-210
+---
+<<rateCoffee CoffeeMeter 15>>
+<<setImage MainImage CafeInsta>>
+<<callAudio SoundEffector PopTapa>>
+Tomo el recipiente de cristal y lo abro.
+Emana un aroma agradable. 
+Una vez que leo las instrucciones por enésima vez, tengo que decidir con qué lo voy a preparar.
+<<setOptions OptionButtons 2>>
+[[Agua|AguaInsta]]
+[[Leche|LecheInsta]]
+
+===
+title: Molido
+tags: 
+colorID: 0
+position: 1669,189
+---
+Empty Text
+===
+title: Grano
+tags: 
+colorID: 0
+position: 2240,221
+---
+Empty Textfdfd
+===
+title: LecheInsta
+tags: Leche
+colorID: 0
+position: 824,-318
+---
+<<rateCoffee CoffeeMeter 20>>
+<<setImage MainImage Refri>>
+<<callAudio SoundEffector Refri>>
+<<set $leche=true>>
+Abro el refrigeredor para elegir qué leche usaré mi café.
+->Entera
+    Entera, me recuerda al café que me preparaban cuando era jóven.
+->Deslactosada
+    Deslactosada, más vale, no quiero que me cause estragos que puedan terminar en una situación incómoda.
+->Almendra
+    Almendra, el peculiar sabor de la leche vegetal vendría bien. 
+<<setImage MainImage Leche>>
+<<rateCoffee CoffeeMeter 30>>
+Definitivamente la mejor elección, ahora ¿cómo debería hacer que mi café alcance la la temperatura ideal?
+<<setOptions OptionButtons 2>>
+[[Microondas|MicroInsta]]
+[[Estufa|EstufaInsta]]
+===
+title: AguaInsta
+tags: Agua
+colorID: 0
+position: 1056,120
+---
+<<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage Agua>>
+<<callAudio SoundEffector vertir>>
+<<set $agua=true>>
+El agua es la mejor manera de infusionar el verdadero sabor del café que me estoy preparando, pero ¿en dónde debería calentarla?
+<<setOptions OptionButtons 2>>
+[[Microondas|MicroInsta]]
+[[Estufa|EstufaInsta]]
+===
+title: MicroInsta
+tags: Micro
+colorID: 0
+position: 287,-52
+---
+<<rateCoffee CoffeeMeter 25>>
+La practicidad y la rapidez de mi horno de microondas es lo que necesito para el control de la temperatura ideal, y así podré disfrutar más rápido de mi café.
+<<if $leche is true>>
+    <<setOptions OptionButtons 2>>
+    ->Usaré un vaso de unicel
+        Este vaso será suficiente para concentrar el calor de la leche 
+        <<set $vaso=true>>
+    ->Usaré mi taza favorita
+        Mi taza nunca falla en mantener la consistencia y calor de mi leche preferida.
+        <<set $taza=true>>
+    <<rateCoffee CoffeeMeter 35>>
+<<endif>>
+
+<<if $agua is true>>
+    <<setOptions OptionButtons 2>>
+    ->Usaré mi taza favorita.
+        Mi taza es lo que necesito para disfritar la preparación de mi café
+        <<set $taza=true>>
+    ->Usaré un vaso de unicel
+        El agua se mantendrá caliente por más tiempo en este vaso.
+        <<set $vaso=true>>
+    <<rateCoffee CoffeeMeter 35>>
+<<endif>>
+
+Ahora la pregunta es ¿Cuánto tiempo debería ponerle al microondas? 
+<<setOptions OptionButtons 3>>
+[[1 minuto|TiempoMicroInsta]]
+[[3 minutos|TiempoMicroInsta]]
+[[5 minutos|TiempoMicroInsta]]
+
+
+===
+title: TiempoMicroInsta
+tags: 
+colorID: 0
+position: 23,304
+---
+<<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage Microondas>>
+<<callAudio SoundEffector microondas>>
+<<if $vaso is true>>
+    Parte de este proceso es esperar, no puedo pensar en otra cosa que no sea mi café mientras veo ese vaso girar.
+<<endif>>
+
+<<if $taza is true>>
+    Siempre disfruto ver mi taza favorita girar, hace la espera más corta, siento que ese osito me busca y me encuentra en cada giro que da, mientras yo pienso en mi café.
+<<endif>>
+
+<<CallAudio SoundEffector Microondas>>
+De repente la luz se apaga y los tres bips suenan, es la hora de la verdad. 
+
+[[Tomar una cuchara|CucharadasInsta]]
+
+===
+title: CucharadasInsta
+tags: 
+colorID: 0
+position: 311,546
+---
+<<rateCoffee CoffeeMeter 70>>
+<<setImage MainImage Cuchara>>
+<<callAudio SoundEffector Cuchara>>
+Tomo la cuchara, escudriño con la intención de encontrar el montículo de partículas de café más apetitosas.
+<<if $agua=true>>
+    Por supuesto esa será la primera cucharada, tomo con la espectativa de haber elegido las correctas, meto la cuchara y su contenido al agua y veo cómo se disuelven con sutileza.
+<<endif>>
+<<if $leche=true>>
+    Es la imagen perfecta, tomo la cuchara y revuelvo el café con la leche generando una consistencia ligeramente espumosa. 
+<<endif>>
+
+Olfateo mi bebida, está casi lista, pero no sé si ponerle más café...
+<<setOptions OptionButtons 2>>
+->Otra cucharada
+    Tomo la cuchara y repito el proceso, la consistencia del café se hace más robusta, el aroma más penetrante. 
+    <<rateCoffee CoffeeMeter 65>>
+->Está listo
+    No necesita más, esa cucharada era la única necesaria para forjar el café que necesito. 
+    <<rateCoffee CoffeeMeter 75>>
+
+El aroma de mi café me llama, ya quiero probarlo, pero desde la alacena me coquetea algo.
+Los diferentes tipos de endulzantes me llaman la atención ¿Debería endulzar mi café? 
+
+[[Un poco de dulzura no me caería mal para empezar el día|AzucarInsta]]
+[[Negro y amargo, como dicen que debe ser|TiempoInsta]]
+
+===
+title: EstufaInsta
+tags: Estufa
+colorID: 0
+position: 619,206
+---
+<<rateCoffee CoffeeMeter 45>>
+<<setImage MainImage Estufa>>
+<<callAudio SoundEffector Fuego>>
+<<if $agua=true>>
+    Vierto el agua en un posillo y enciendo la estufa, espero con un deseo vehemente que suelte hervor, poco a poco las burbujas se hacen visibles desde el fondo del recipiente, de repente. 
+    <<callAudio SoundEffector aguahirviendo>>
+    Las burbujas brotan.
+<<endif>>
+
+<<if $leche=true>>
+    La leche se calienta
+    <<callAudio SoundEffector lechehirviendo>>
+    Huele feo
+<<endif>>
+
+Llegó la hora de la verdad. 
+
+[[Tomar una cuchara|CucharadasInsta]]
+===
+title: AzucarInsta
+tags: 
+colorID: 0
+position: 69,793
+---
+<<setImage MainImage DespensaAzucar>>
+<<callAudio SoundEffector Alacena>>
+Junto al café molido y el café en grano está el azúcar, un edulcorante que me regalaron y...
+Miel, definitivamente todas excelentes opciones para optimizar el sabor de mi café.
+<<setOptions OptionButtons 3>>
+->Azúcar
+    <<setImage MainImage Azucar>>
+    Un clásico que nunca falla en activar mis papilas gustativas y darme un pequeño empuje de enrgía para empezar el día.
+->Edulcorante
+    <<setImage MainImage Edulcorante>>
+    Bueno, seguramente la persona que me lo regaló querrá saber mi opinión, y si se preocupó por mí es un buen momento para probar estos sobrcitos amarillos.
+->Miel
+    <<setImage MainImage Miel>>
+    Una opción natural que resalta el sabor de cualquier cosa, incluyendo mi café. 
+
+Revuelvo todos los ingredientes, mi café está listo.
+
+[[Me acerco a darle un sorbo|TiempoInsta]]
+===
+title: TiempoInsta
+tags: 
+colorID: 0
+position: 773,755
+---
+<<rateCoffee CoffeeMeter 90>>
+<<setImage MainImage TazaConCafe>>
+Pero, quizá está muy caliente, quizá debería dejar que se enfríe un poco.
+<<setOptions OptionButtons 2>>
+[[Dejar que se enfríe|FrioInsta]]
+[[Tomarlo caliente|FinInsta]]
+
+
+
+
+
+===
+title: FinInsta
+tags: 
+colorID: 0
+position: 1297,783
+---
+<<rateCoffee CoffeeMeter 100>>
+<<setImage MainImage TazaConCafe>>
+
+<<if $taza=true>>
+    Acerco mi taza favorita a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
+    No hay mejor manera de empezar el día, que tomando en tu café favorito en tu hogar.
+<<endif>>
+
+<<if $vaso=true>>
+    Acerco el vaso favorita a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
+    No hay mejor manera de empezar el día, que tomando en tu café favorito en tu hogar.
+<<endif>>
+===
+title: FrioInsta
+tags: 
+colorID: 0
+position: 947,417
+---
+<<setImage MainImage TazaCafe>>
+<<rateCoffee CoffeeMeter 80>> 
+
+Más vale que llegue a la temperatura ideal, que el aroma inunde el espacio, puedo esperar otro rato.
+
+El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
+<<setOptions OptionButtons 2>>
+->Dejar que se enfríe más 
+    <<if $taza=true>> 
+    El humo deja de amanar de la taza, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+    <<endif>>
+    <<if $vaso=true>>
+    El humo deja de amanar del vaso, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+    <<endif>>
+    <<rateCoffee CoffeeMeter 95>>
+->La temperatura está bien
+    La temperatura de mi café parece ser la adecuada, llegó el momento de tomar mi café 
+
+[[Dar un sorbo|FinInsta]]
+    
+===
