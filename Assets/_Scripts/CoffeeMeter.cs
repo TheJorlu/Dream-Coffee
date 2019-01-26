@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CoffeeMeter : MonoBehaviour
 {
+    public bool isChanging;
+
     private Image meterFill;
     private Animation anim;
 
@@ -23,6 +25,9 @@ public class CoffeeMeter : MonoBehaviour
 
     IEnumerator DisplayMeter(float fillValue)
     {
+        isChanging = true;
+        yield return new WaitForSeconds(.5f);
+
         anim.PlayNormal(1);
 
         do
@@ -33,5 +38,6 @@ public class CoffeeMeter : MonoBehaviour
         while (System.Math.Abs(meterFill.fillAmount - fillValue) > 0.01f);
 
         anim.PlayBackwards(1);
+        isChanging = false;
     }
 }

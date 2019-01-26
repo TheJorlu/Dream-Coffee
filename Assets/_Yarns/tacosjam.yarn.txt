@@ -7,7 +7,6 @@ Raytone: Que pedotl
 Jorlu: Pos nada
 
 <<setOptions OptionButtons 2>>
-<<rateCoffee CoffeeMeter 35>>
 [[Mañana a los jams?|Jam]]
 [[Mañana a los tacos?|Tacos]]
 [[No quiero|Paso]]

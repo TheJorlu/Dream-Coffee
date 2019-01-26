@@ -139,6 +139,7 @@ namespace Yarn.Unity.Example {
             int i = 0;
             foreach (var optionString in optionsCollection.options) {
                 optionButtons [i].gameObject.SetActive (true);
+                optionButtons[i].GetComponent<Animation>().PlayNormal(1.5f);
                 optionButtons [i].GetComponentInChildren<TextMeshProUGUI> ().text = optionString;
                 i++;
             }
@@ -153,7 +154,22 @@ namespace Yarn.Unity.Example {
 
             // Hide all the buttons
             foreach (var button in optionButtons) {
-                button.gameObject.SetActive (false);
+                StartCoroutine(DissappearButtons());
+            }
+        }
+
+        IEnumerator DissappearButtons()
+        {
+            foreach (var button in optionButtons)
+            {
+                button.GetComponent<Animation>().PlayBackwards(2);
+            }
+
+            yield return new WaitForSeconds(.5f);
+
+            foreach (var button in optionButtons)
+            {
+                button.gameObject.SetActive(false);
             }
         }
 

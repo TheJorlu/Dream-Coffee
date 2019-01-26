@@ -15,6 +15,13 @@ public class ImageSwitcher : MonoBehaviour
     public Image image;
     public SpriteInfo[] sprites;
 
+    private Animation anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animation>();
+    }
+
     [YarnCommand("setImage")]
     public void SetImageSprite(string spriteName)
     {
@@ -34,6 +41,7 @@ public class ImageSwitcher : MonoBehaviour
             return;
         }
 
+        anim.PlayNormal(.75f);
         image.sprite = s;
     }
 }
