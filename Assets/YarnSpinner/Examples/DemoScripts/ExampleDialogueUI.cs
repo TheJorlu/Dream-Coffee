@@ -29,6 +29,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
+using TMPro;
 
 namespace Yarn.Unity.Example {
     /// Displays dialogue lines to the player, and sends
@@ -49,7 +50,7 @@ namespace Yarn.Unity.Example {
         public GameObject dialogueContainer;
 
         /// The UI element that displays lines
-        public Text lineText;
+        public TextMeshProUGUI lineText;
 
         /// A UI element that appears after lines have finished appearing
         public GameObject continuePrompt;
@@ -138,7 +139,7 @@ namespace Yarn.Unity.Example {
             int i = 0;
             foreach (var optionString in optionsCollection.options) {
                 optionButtons [i].gameObject.SetActive (true);
-                optionButtons [i].GetComponentInChildren<Text> ().text = optionString;
+                optionButtons [i].GetComponentInChildren<TextMeshProUGUI> ().text = optionString;
                 i++;
             }
 
