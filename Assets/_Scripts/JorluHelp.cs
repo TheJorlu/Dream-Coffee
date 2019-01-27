@@ -158,4 +158,16 @@ public static class JorluHelp
 
         return color;
     } 
+
+    public static IEnumerator NewWaitForSeconds(this MonoBehaviour b, float t)
+    {
+        float time = 0f;
+
+        do
+        {
+            yield return null;
+            if (Input.anyKey) yield break;
+            time += Time.deltaTime;
+        } while (time < t);
+    }
 }

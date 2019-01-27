@@ -94,16 +94,17 @@ namespace Yarn.Unity.Example {
             yield return new WaitForSeconds(.3f);
             // Show the text
             lineText.gameObject.SetActive (true);
-
+            
             if (textSpeed > 0.0f) {
                 // Display the line one character at a time
-                var stringBuilder = new StringBuilder ();
+                var visible = new StringBuilder ();
                 var length = 0;
+                string invisible = line.text;
                 while(length < line.text.Length && !Input.anyKey) {
-
-                    stringBuilder.Append(line.text[length]);
-                    lineText.text = stringBuilder.ToString();
-                    yield return StartCoroutine( NewWaitForSeconds(textSpeed));
+                    visible.Append (invisible[0]);
+                    invisible = invisible.Remove(0,1);
+                    lineText.text = $"{visible}<alpha=#00>{invisible}";
+                    yield return StartCoroutine( this.NewWaitForSeconds(textSpeed));
                     length++;
 
                 }
@@ -234,17 +235,7 @@ namespace Yarn.Unity.Example {
             yield break;
         }
 
-        IEnumerator NewWaitForSeconds(float t)
-        {
-            float time = 0f;
-
-            do
-            {
-                yield return null;
-                if (Input.anyKey) yield break;
-                time += Time.deltaTime;
-            } while (time < t);
-        }
+        
     }
 
 }
