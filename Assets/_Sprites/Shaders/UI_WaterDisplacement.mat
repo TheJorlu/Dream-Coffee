@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ColorMask: 256
-    - _Magnitude: 0.01
+    - _Magnitude: 0.007
     - _Stencil: 0
     - _StencilComp: 0
     - _StencilOp: 0

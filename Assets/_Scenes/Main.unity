@@ -607,12 +607,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 279879443}
   sprites:
-  - name: space
-    sprite: {fileID: 21300000, guid: fd899a4269bb84697ac44eb9dbfb59d3, type: 3}
-  - name: jam
-    sprite: {fileID: 21300000, guid: 30b8e95305c3d446eb1b371d854f3e45, type: 3}
-  - name: taco
-    sprite: {fileID: 21300000, guid: 8f4f32d515ad748ac9e35ad60b82e349, type: 3}
+  - name: chemex
+    sprite: {fileID: 21300000, guid: a99bcd67489dd4a7fad31dc473eaee49, type: 3}
+  - name: microondas
+    sprite: {fileID: 21300000, guid: 22e95a546f41f44f388e844178f34e78, type: 3}
+  - name: olla
+    sprite: {fileID: 21300000, guid: ebf8c437227b041378e29e1392a44862, type: 3}
+  - name: azucarera
+    sprite: {fileID: 21300000, guid: df688d4a29a864ebba76c93910aa43eb, type: 3}
+  - name: cafeteraVacia
+    sprite: {fileID: 21300000, guid: b710cbe5d136043a08a67ae8594afbc6, type: 3}
+  - name: cafeteraLlena
+    sprite: {fileID: 21300000, guid: c0908be24a3b94ae9b540b1cf062d979, type: 3}
+  - name: canela
+    sprite: {fileID: 21300000, guid: 09f997fc955244711a56dc0e1cc375cf, type: 3}
+  - name: clavo
+    sprite: {fileID: 21300000, guid: c97378c3cb6b4457a82e9bca1a4b4af3, type: 3}
+  - name: cuchara
+    sprite: {fileID: 21300000, guid: 7c33ade822b154ae181def3c075a5361, type: 3}
+  - name: estufa
+    sprite: {fileID: 21300000, guid: 63ba75647441f41338a6d5120f9a5fd4, type: 3}
+  - name: filtroPapel
+    sprite: {fileID: 21300000, guid: 8f4f98dfa34ac40cfb800de2f4f40564, type: 3}
+  - name: filtroPlastico
+    sprite: {fileID: 21300000, guid: 75e3fda0339e64df48a0b9fb7c4d13bb, type: 3}
+  - name: leche
+    sprite: {fileID: 21300000, guid: e281d45347d0d4f3c83a3234a4098246, type: 3}
+  - name: miel
+    sprite: {fileID: 21300000, guid: ef63ebdacc08148e79c064c7ba04a8cb, type: 3}
+  - name: molido
+    sprite: {fileID: 21300000, guid: ddd3a551b19714e328814cbf7a0b8c06, type: 3}
+  - name: molinoManual
+    sprite: {fileID: 21300000, guid: e7f02b186642241028810f26dee47912, type: 3}
+  - name: molinoElectrico
+    sprite: {fileID: 21300000, guid: 11da6eeede4dd4546b7880c3f0e25d59, type: 3}
+  - name: piloncillo
+    sprite: {fileID: 21300000, guid: dfb8120e6add248328cbf6b7062e70d8, type: 3}
+  - name: pocillo
+    sprite: {fileID: 21300000, guid: 651b65902d03b46799d85030cc1eb38e, type: 3}
+  - name: prensa
+    sprite: {fileID: 21300000, guid: 99b6ecbda5dda41a68758149f9bdf408, type: 3}
+  - name: refri
+    sprite: {fileID: 21300000, guid: 892a63d1c6b31455da10151af04dfe7c, type: 3}
+  - name: sol
+    sprite: {fileID: 21300000, guid: 59c75ffdc76454c078586be3efe8b4a8, type: 3}
+  - name: soluble
+    sprite: {fileID: 21300000, guid: 5c6b589bdafef497885fc7b24efba935, type: 3}
+  - name: splendid
+    sprite: {fileID: 21300000, guid: 7c079ecd3818d4d02b561af02a60050b, type: 3}
+  - name: tazaVacia
+    sprite: {fileID: 21300000, guid: d9dc029fbabf34aa48c63614f0c805ef, type: 3}
+  - name: tazaLlena
+    sprite: {fileID: 21300000, guid: 21232936c3d474a90988f648c90d1223, type: 3}
+  - name: thermo
+    sprite: {fileID: 21300000, guid: b02f374983df14f92a032146e2c1be27, type: 3}
+  - name: unicel
+    sprite: {fileID: 21300000, guid: 0101eb7dc13244a0e8fa71a9265b6ec3, type: 3}
+  - name: zapato
+    sprite: {fileID: 21300000, guid: f42018d78711b438d9bf7a4cf8d76a1d, type: 3}
+  - name: alacena
+    sprite: {fileID: 0}
 --- !u!114 &279879446
 MonoBehaviour:
   m_ObjectHideFlags: 0

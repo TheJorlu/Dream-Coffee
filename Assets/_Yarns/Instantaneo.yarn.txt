@@ -1,7 +1,7 @@
 title: ¡Buenos días!
 tags: 
 colorID: 0
-position: 1676,-283
+position: 1676,-281
 ---
 <<rateCoffee CoffeeMeter 0>>
 <<setImage MainImage sol>>
@@ -11,7 +11,6 @@ Después de una reconfortante noche de sueño me despierto con la emoción de pr
 Me levanto y voy a la cocina
 Mi ritual mañanero es tan emocionante como siempre, me acerco a la alacena y la abro para elegir el tipo de café que me voy a preparar
 <<setOptions OptionButtons 3>>
-<<startTimer DialogueRunner Indecision>>
 [[Café Instantáneo|Instantaneo]]
 [[Café Molido|Molido]]
 [[Café en Grano|Grano]]
@@ -229,7 +228,7 @@ position: 773,755
 ---
 <<rateCoffee CoffeeMeter 90>>
 <<setImage MainImage TazaConCafe>>
-Pero, quizá está muy caliente, quizá debería dejar que se enfríe un poco.
+Pero, tal vez está muy caliente, quizá debería dejar que se enfríe un poco.
 <<setOptions OptionButtons 2>>
 [[Dejar que se enfríe|FrioInsta]]
 [[Tomarlo caliente|FinInsta]]
@@ -253,7 +252,7 @@ position: 1297,783
 <<endif>>
 
 <<if $vaso=true>>
-    Acerco el vaso favorita a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
+    Acerco el vaso a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
     No hay mejor manera de empezar el día, que tomando en tu café favorito en tu hogar.
 <<endif>>
 ===
@@ -282,11 +281,4 @@ El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
 
 [[Dar un sorbo|FinInsta]]
     
-===
-title: Indecision
-tags: 
-colorID: 0
-position: 1693,-618
----
-Chale, no se como me gusta el café
 ===
