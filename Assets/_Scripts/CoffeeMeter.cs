@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class CoffeeMeter : MonoBehaviour
 {
-    public bool isChanging;
+    public Image cupProgressImage;
+    public Sprite[] cupProgressSprites;
+    [HideInInspector]public bool isChanging;
 
     private Image meterFill;
     private Animation anim;
@@ -25,6 +27,12 @@ public class CoffeeMeter : MonoBehaviour
 
     IEnumerator DisplayMeter(float fillValue)
     {
+        if(fillValue < 0.1f)
+        {
+            meterFill.fillAmount = 0;
+            yield break;
+        }
+
         isChanging = true;
         yield return new WaitForSeconds(.5f);
 
@@ -33,9 +41,21 @@ public class CoffeeMeter : MonoBehaviour
         do
         {
             meterFill.fillAmount = Mathf.Lerp(meterFill.fillAmount, fillValue, Time.deltaTime);
+
+            if (meterFill.fillAmount < .25f)
+                cupProgressImage.sprite = cupProgressSprites[0];
+            else if (meterFill.fillAmount < .75f)
+                cupProgressImage.sprite = cupProgressSprites[1];
+            else
+                cupProgressImage.sprite = cupProgressSprites[2];
+
             yield return 0;
         }
-        while (System.Math.Abs(meterFill.fillAmount - fillValue) > 0.01f);
+        while (System.Math.Abs(meterFill.fillAmount - fillValue) > 0.01f && !Input.anyKey);
+
+        meterFill.fillAmount = fillValue;
+
+        yield return new WaitForSeconds(.2f);
 
         anim.PlayBackwards(1);
         isChanging = false;

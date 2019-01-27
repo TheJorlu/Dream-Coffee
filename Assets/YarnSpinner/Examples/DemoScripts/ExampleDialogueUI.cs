@@ -30,6 +30,7 @@ using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Yarn.Unity.Example {
     /// Displays dialogue lines to the player, and sends
@@ -47,7 +48,12 @@ namespace Yarn.Unity.Example {
         /** This object will be enabled when conversation starts, and 
          * disabled when it ends.
          */
+
+        public Animation fadeOutPlane;
+        public GameObject endText;
+
         public GameObject dialogueContainer;
+        public CoffeeMeter coffeeMeter;
 
         /// The UI element that displays lines
         public TextMeshProUGUI lineText;
@@ -93,10 +99,14 @@ namespace Yarn.Unity.Example {
         /// Show a line of dialogue, gradually
         public override IEnumerator RunLine (Yarn.Line line)
         {
+            //Wait for cofeeMeter
+            do{yield return null;}
+            while (coffeeMeter.isChanging);
+
             yield return new WaitForSeconds(.3f);
             // Show the text
             lineText.gameObject.SetActive (true);
-            
+
             if (textSpeed > 0.0f) {
                 // Display the line one character at a time
                 var visible = new StringBuilder ();
@@ -238,10 +248,25 @@ namespace Yarn.Unity.Example {
                 gameControlsContainer.gameObject.SetActive(true);
             }
 
+            //Show final screen
+            StartCoroutine(FinishGame());
             yield break;
         }
 
-        
+        IEnumerator FinishGame()
+        {
+            endText.SetActive(true);
+
+            yield return new WaitForSeconds(1);
+
+            fadeOutPlane.PlayNormal(1);
+            do { yield return null; }
+            while (fadeOutPlane.isPlaying);
+
+            yield return new WaitForSeconds(.2f);
+
+            SceneManager.LoadScene(0);
+        }
     }
 
 }
