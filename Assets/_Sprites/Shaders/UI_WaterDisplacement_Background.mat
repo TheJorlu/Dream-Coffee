@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI_WaterDisplacement
+  m_Name: UI_WaterDisplacement_Background
   m_Shader: {fileID: 4800000, guid: b03f0c67a170ba241aad86d4f90183cd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ColorMask: 256
-    - _Magnitude: 0.01
+    - _Magnitude: 0.0023
     - _Stencil: 0
     - _StencilComp: 0
     - _StencilOp: 0

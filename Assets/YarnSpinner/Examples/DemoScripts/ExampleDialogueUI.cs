@@ -91,22 +91,28 @@ namespace Yarn.Unity.Example {
         /// Show a line of dialogue, gradually
         public override IEnumerator RunLine (Yarn.Line line)
         {
+            yield return new WaitForSeconds(.3f);
             // Show the text
             lineText.gameObject.SetActive (true);
 
             if (textSpeed > 0.0f) {
                 // Display the line one character at a time
                 var stringBuilder = new StringBuilder ();
+                var length = 0;
+                while(length < line.text.Length && !Input.anyKey) {
 
-                foreach (char c in line.text) {
-                    stringBuilder.Append (c);
-                    lineText.text = stringBuilder.ToString ();
-                    yield return new WaitForSeconds (textSpeed);
+                    stringBuilder.Append(line.text[length]);
+                    lineText.text = stringBuilder.ToString();
+                    yield return StartCoroutine( NewWaitForSeconds(textSpeed));
+                    length++;
+
                 }
-            } else {
-                // Display the line immediately if textSpeed == 0
-                lineText.text = line.text;
-            }
+            } 
+
+            // Display the line immediately if textSpeed == 0
+            lineText.text = line.text;
+
+            yield return null;
 
             // Show the 'press any key' prompt when done, if we have one
             if (continuePrompt != null)
@@ -228,6 +234,17 @@ namespace Yarn.Unity.Example {
             yield break;
         }
 
+        IEnumerator NewWaitForSeconds(float t)
+        {
+            float time = 0f;
+
+            do
+            {
+                yield return null;
+                if (Input.anyKey) yield break;
+                time += Time.deltaTime;
+            } while (time < t);
+        }
     }
 
 }
