@@ -1,0 +1,1013 @@
+title: ¡Buenos días!
+tags: 
+colorID: 0
+position: 1586,-971
+---
+<<rateCoffee CoffeeMeter 0>>
+<<setImage MainImage sol>>
+<<callAudio SoundEffector pajaros>>
+El sol sale, los pájaros cantan. 
+Después de una reconfortante noche de sueño me despierto con la emoción de preparar mi café favorito.
+Me levanto y voy a la cocina
+Mi ritual mañanero es tan emocionante como siempre, me acerco a la alacena y la abro para elegir el tipo de café que me voy a preparar
+<<setOptions OptionButtons 3>>
+[[Café Instantáneo|Instantaneo]]
+[[Café Molido|Molido]]
+[[Café en Grano|Grano]]
+===
+title: Molido
+tags: 
+colorID: 0
+position: 3746,-237
+---
+<<rateCoffee CoffeeMeter 25>>
+<<setImage MainImage molido>>
+Tomo el bote de aluminio que se encarga de preservar la frescura de los granos ya molidos del estante.
+Lo abro y como cada mañana el aroma del café me deleita como si los granos estuvieran recién molidos. 
+La emoción me invade, observo las posibilidaes que ofrecen los utensilios que tengo frente a mí, esta mañana haré mi café con una
+<<setOptions OptionButtons 3>>
+[[Cafetera|Cafetera]]
+[[Olla|Olla]]
+[[Prensa Francesa|Prensa]]
+===
+title: Grano
+tags: 
+colorID: 0
+position: 1670,-395
+---
+<<rateCoffee CoffeeMeter 5>>
+<<setImage MainImage cafeGrano>>
+ Me acerco a la alacena y saco un diminuto costal que contiene los granos más frescos y maduros que he podido almacenar.
+Observo a mi alrededor y veo los molinos que me ayudarán a que el alma de los granos pueda liberarse.
+<<setOptions OptionButtons 2>>
+[[Tomo mi molino eléctrico|Electrico]]
+[[Me acerco a mi molino manual|Manual]]
+===
+title: Olla
+tags: 
+colorID: 0
+position: 2222,578
+---
+<<rateCoffee CoffeeMeter 35>>
+<<setImage MainImage olla>>
+Las posibilidades que me brinda este método de preparación son infinitas...
+
+¿Le debería poner especias que complementen el sabor del café?
+<<setOptions OptionButtons 2>>
+<<set $contador=0>>
+[[Me acerco a la alacena|ChecarEspecias]]
+[[Me voy a la estufa|TiempoHervir]]
+===
+title: Cafetera
+tags: 
+colorID: 0
+position: 1146,328
+---
+<<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage cafeteraVacia>>
+El reloj digital de la cafetera me reconforta al hacerme saber que tengo el tiempo suficiente para prepararme el café que yo quiera. 
+Me acerco a ella, la jarra de cristal reluce como cada mañana.
+Debo de llenar el tanque que está en la parte posterior.
+<<setOptions OptionButtons 3>>
+[[Vierto una taza de agua|Filtro]]
+[[Llego a medio tanque|Filtro]]
+[[Lleno el tanque|Filtro]]
+===
+title: Prensa
+tags: 
+colorID: 0
+position: 3739,616
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage prensa>>
+
+El sabor que logra este método siempre me deja satisfecho, ideal para empezar el día.
+Me acerco al recipiente adecuado para calentar el agua.
+->Me acerco al microondas
+    <<setImage MainImage microondas>>
+    <<rateCoffee CoffeeMeter 40>>
+    Tomo un vaso de plástico y le pongo unos minutos al microondas para que el agua llegue a la temperatura ideal.
+->Me acerco a la estufa
+    <<setImage MainImage pocillo>>
+    <<rateCoffee CoffeeMeter 55>>
+    Tomo una taza de metal, prendo la estufa y me espero hasta que el agua empieza a burbujear.
+
+<<setImage MainImage prensa>>
+<<setOptions OptionButtons 3>>
+<<callAudio SoundEffector vertirAgua>>
+Vierto el agua caliente en la prensa y la dejo reposar un poco. Tomo el café y lo echo en la prensa.
+->Una cucharada
+    Una carga ligera es ideal para comenzar esta mañana.
+    <<rateCoffee CoffeeMeter 50>>
+->Dos cucharadas
+    Una carga moderada me dará el sabor que quiero y la energía que necesito.
+    <<rateCoffee CoffeeMeter 55>>
+->Tres cucharadas
+    Una carga y sabor intensos son lo que necesito esta mañana. 
+    <<rateCoffee CoffeeMeter 60>>
+
+Después de que reposó el tiempo pertinente, tengo que elegir en qué recipiente voy a disfrutar mi café. 
+
+[[Lo serviré mi taza favorita|TazaPrensa]]
+[[Un vaso será lo más práctico|VasoPrensa]]
+[[En este termo se mantendrá caliente|TermoPrensa]]
+
+
+    
+    
+===
+title: Plastico
+tags: ayuda
+colorID: 0
+position: 117,704
+---
+<<rateCoffee CoffeeMeter 10>>
+<<setImage MainImage filtroPlastico>>
+<<callAudio SoundEffector Plastico>>
+La practicidad del filtro que trae la cafetera siempre se agradece, se limpia con facilidad e impregna un buen sabor.
+Tomo de entre los demás utensilios de la cocina el filtro y lo dejo reposar en el compartimento correspondiente.
+
+Ya lista la disposición de todos los elementos, ahora sí, llegó el momento de poner el café.
+
+Tomo una cuchara y rasco el café que está en el bote y vierto el café, esparso por todo el filtro para que quede perfectamente distribuido. 
+
+Con una mano tomo el bote y con otro la cuchara.  
+<<setOptions OptionButtons 2>>
+->Agregar más café
+    Y agrego otra cucharada de esas aromáticas partículas para llenar un poco más el filtro y que el café quede más concentrado.[[Tomo de nuevo el bote|MasCafeMolido]]
+    <<rateCoffee CoffeeMeter 25>>
+->Con eso es suficiente
+    Cierro el bote, guardo la cuchara. Las porciones son las adecuadas, no puedo esperar a que el aroma del café inunde la habitación [[Prender Cafetera|CafeteraPrendida]]
+
+
+
+
+    
+
+===
+title: Papel
+tags: 
+colorID: 0
+position: 848,736
+---
+<<rateCoffee CoffeeMeter 70>>
+<<setImage MainImage filtroPapel>>
+La frescura del filtro de papel es mágica.
+
+Ya lista la disposición de todos los elementos, ahora sí, llegó el momento de poner el café.
+
+Tomo una cuchara y rasco el café que está en el bote y lo vierto, esparso por todo el filtro para que quede perfectamente distribuido. 
+
+Con una mano tomo el bote y con otro la cuchara.  
+<<setOptions OptionButtons 2>>
+->Agregar más café
+    <<callAudio SoundEffector cuchara>>
+    Y agrego otra cucharada de esas aromáticas partículas para llenar un poco más el filtro y que el café quede más concentrado.[[Tomo de nuevo el bote|MasCafeMolido]]
+    <<rateCoffee CoffeeMeter 25>>
+->Con eso es suficiente
+    Cierro el bote, guardo la cuchara. Las porciones son las adecuadas, no puedo esperar a que el aroma del café inunde la habitación [[Prender Cafetera|CafeteraPrendida]]
+===
+title: Filtro
+tags: 
+colorID: 0
+position: 525,384
+---
+<<rateCoffee CoffeeMeter 35>>
+<<callAudio SoundEffector Agua>>
+
+Despues abro el compartimento donde hay que colocar el café, pero para que esto funcione, los granos molidos deben reposar sobre un filtro.
+Normalmente es una decision sencilla pero hoy no sé qué tipo de filtro poner. 
+<<setOptions OptionButtons 2>>
+[[Filtro de plástico|Plastico]]
+[[Filtro de papel|Papel]]
+===
+title: CafeteraPrendida
+tags: 
+colorID: 0
+position: 500,1122
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage cafeteraLlena>>
+<<callAudio SoundEffector filtroPlastico>>
+
+El sonido de la cafetera empieza a ser cada vez más intenso, poco a poco las gotas de café caen en la jarra de cristal.
+El ciclo concluye, en la jarra se postra el delicioso líquido obscuro que me hará empezar mi mañana de la mejor manera.
+Ahora, para poder disfrutarlo como se debe debo servirlo en el recipiente adecuado. 
+<<setOptions OptionButtons 3>>
+->Saco un vaso de un paquete
+    <<set $vaso=true>>
+    <<setImage MainImage unicel>>
+    Tomo un vaso desechable para servir mi café, la practicidad es lo que necesito
+    <<rateCoffee CoffeeMeter 55>>
+->Saco un termo
+    <<set $termo=true>>
+    <<setImage MainImage thermo>>
+    Mi prioridad es mantener la temperatura de mi bebida durante el día, tomaré mi termo para poder lograr eso.
+    <<rateCoffee CoffeeMeter 60>>
+->Tomo mi taza favorita
+    <<set $taza=true>>
+    <<setImage MainImage tazaVacia>>
+    Mi taza favorita me acompaña cada mañana y hoy no será excepción.
+    <<rateCoffee CoffeeMeter 70>>
+
+Quizá un toque de leche le vendría bien a mi café. 
+<<setOptions OptionButtons 2>>
+[[Me acerco al refri y lo abro|LecheCafeteraSi]]
+[[O quizá así está bien|LecheCafeteraNo]]
+  
+===
+title: MasCafeMolido
+tags: 
+colorID: 0
+position: 512,696
+---
+<<rateCoffee CoffeeMeter 45>>
+<<setImage MainImage Cafetera>>
+<<callAudio SoundEffector cuchara>>
+Rasco el café con la cuchara, hay suficiente para que quede más cargado.
+<<setOptions OptionButtons 2>>
+->Agregar otra cucharada
+    Tomo con la cuchara las partículas de café que están más al fondo, con finesa las vierto sobre el filtro que se ve lo suficientemente lleno para una carga robusta.[[Encender Cafetera|CafeteraPrendida]]
+    <<rateCoffee CoffeeMeter 30>>
+->No necesita más
+    Revuelvo los granos con la cuchara, la guardo al igual que el bote, parece que hay café suficiente en el filtro. [[Encender Cafetera|CafeteraPrendida]]
+===
+title: LecheCafeteraSi
+tags: 
+colorID: 0
+position: 255,1406
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage refri>>
+<<set $leche=true>>
+
+Me acerco al refrigerador a elegir el tipo de leche adecuado para darle una consistencia cremosa a mi ya casi perfecto café.
+<<setOptions OptionButtons 3>>
+->Almendra
+    Aunque me vaya al Bad Place a estar con Chidi, la leche vegetal le da un toque único a mi café.
+    <<rateCoffee CoffeeMeter 40>>
+->Entera
+    La leche tradicional nunca falla, la frescura se impregna en el café y deja una sensación muy notoria de satisfacción
+    <<rateCoffee CoffeeMeter 50>>
+->Deslactosada
+    Más vale que cuide mi estómago, solo un poco de esta leche para pintar mi café de tonos marron para poder disfrutarlo esta mañana.
+    <<rateCoffee CoffeeMeter 45>>
+
+Quizá, un poco de dulce le vendría bien a mi café
+<<setOptions OptionButtons 2>>
+[[Me acerco a la alacena para elegir un endulzante|AzucarCafeteraSi]]
+[[No es necesario, el sabor amargo es el ideal|FrioMolido]]
+
+===
+title: LecheCafeteraNo
+tags: 
+colorID: 0
+position: 827,1382
+---
+<<rateCoffee CoffeeMeter 60>>
+
+El color y consistencia de mi café parece estar acercándose a la perfección, quizá debería impulsar su sabor endulzándolo un poco.
+<<setOptions OptionButtons 2>>
+[[¡IMPULSAR!|AzucarCafeteraSi]]
+[[O quizá, hoy no es necesario|FrioMolido]]
+
+===
+title: AzucarCafeteraSi
+tags: 
+colorID: 0
+position: 530,1629
+---
+<<rateCoffee CoffeeMeter 75>>
+<<setImage MainImage Cafetera>>
+<<callAudio SoundEffector alacena>>
+<<set $azucar=true>>
+
+<<setOptions OptionButtons 3>>
+<<if $vaso=true>>
+    De las opciones que hay en la alacena, todas me llaman la atención, ¿cuál es la que más me deleitará?
+    ->Azúcar
+        <<setImage MainImage azucarera>>
+        <<rateCoffee CoffeeMeter 60>>
+        Tomo una cuchara, la meto en la bolsa de azucar y le pongo la cantidad exacta a mi vaso de café.
+        Lo agíto hasta que se incorpora perfectamente a la consistencia de mi bebida.
+    ->Edulcorante
+        <<rateCoffee CoffeeMeter 20>>
+        <<setImage MainImage splendid>>
+        Tomo un sobre, lo abro y lo vierto en mi vaso, lo agito y dejo que repose un rato.
+    ->Miel
+        <<rateCoffee CoffeeMeter 50>>
+        <<setImage MainImage miel>>
+        Con un palito mielero, recolecto la miel ideal para mi café y la sirvo en mi vaso, con una cuchara lo revuelvo para después dejarlo reposar un rato.
+<<endif>>
+
+<<if $termo=true>>
+    De las opciones que hay en la alacena, todas me llaman la atención, ¿cuál es la que más me deleitará?
+    ->Azúcar
+        <<setImage MainImage azucarera>>
+        <<rateCoffee CoffeeMeter 60>>
+        Tomo una cuchara, la meto en la bolsa de azucar y le vierto la cantidad exacta en mi termo.
+        Lo cierro y lo agíto hasta que se incorpora perfectamente a la consistencia de mi bebida.
+    ->Edulcorante
+        <<setImage MainImage splendid>>
+        <<rateCoffee CoffeeMeter 20>>
+        Tomo un sobre, lo abro y lo vierto en mi termo, lo cierro, lo agito y dejo que repose un rato.
+    ->Miel
+        <<setImage MainImage miel>>
+        Con un palito mielero, recolecto la miel ideal para mi café, dejo que se derrame en mi termo, lo cierro y lo agito para endulzarlo. 
+<<endif>>
+
+<<if $taza=true>>
+    De las opciones que hay en la alacena, todas me llaman la atención, ¿cuál es la que más me deleitará?
+    ->Azúcar
+        <<setImage MainImage azucarera>>
+        <<rateCoffee CoffeeMeter 60>>
+        Tomo una cuchara, la meto en la bolsa de azucar y le vierto la cantidad exacta en mi taza.
+        La revuelvo con una cuchara hasta que se incorpora perfectamente a la consistencia de mi bebida.
+    ->Edulcorante
+        <<setImage MainImage splendid>>
+        <<rateCoffee CoffeeMeter 20>>
+        Tomo un sobre, lo abro y lo vierto en mi taa, con una cuchara la agito y dejo que repose un rato.
+    ->Miel
+        <<setImage MainImage miel>>
+        <<rateCoffee CoffeeMeter 50>>
+        Con un palito mielero, recolecto la miel ideal para mi café, dejo que se derrame en mi taza, los revuelvo con una cuchara. 
+<<endif>>
+<<callAudio SoundEffector pop>>
+
+
+Ahora sí...
+[[Me tomo mi cafecito|FrioMolido]]
+    
+===
+title: FinMolido
+tags: 
+colorID: 0
+position: 1140,4906
+---
+<<rateCoffee CoffeeMeter 100>>
+<<callAudio SoundEffector logro>>
+
+<<if $taza==true>>
+    <<if $leche==true>>
+        Tomo mi taza, observo mi cremosa bebida, es perfecta, el sabor, la consistencia...
+        Este café siempre me llena de dicha al despertar, me da gusto poder preparar a mi gusto lo que más disfruto tomar.
+    <<endif>>
+    <<if $agua==true>>
+        Observo la consistencia obscura de mi bebida, es perfecta, la potencia del sabor era lo que necesitaba.
+        Esta preparación siempre me deja satisfecho, me gusta pensar que esta taza es mi amiga, que algo maravilloso puede empezar de una mañana como esta.
+    <<endif>>
+<<endif>>
+
+<<if $vaso==true>>
+    Quizá debería dejar de tomar en esatas cosas, mi café es perfecto pero estos vasos no son lo mejor para el planeta.
+    El café siempre puede ayudarte convertir una obviedad en una reflexión.
+<<endif>>
+
+<<if $termo==true>>
+    La practicidad del termo me hace sentir que me puedo llevar un poco de la comodidad y seguridad que siento a todos lados.
+    Aunque no lo parezca, mi café siempre me hace sentir en casa.
+<<endif>>
+
+
+
+
+
+
+
+
+===
+title: TiempoHervir
+tags: 
+colorID: 0
+position: 1859,2052
+---
+<<rateCoffee CoffeeMeter 65>>
+<<setImage MainImage estufa>>
+<<callAudio SoundEffector estufa>>
+
+El calor de la estufa poco a poco hace que el agua empiece a hervir, las burbujas se hacen visibles desde el fondo del recipiente.
+El sonido del hervor tranquiliza, el aroma empieza a notarse alrededor.
+<<setOptions OptionButtons 3>>
+->Dejar hervir el agua
+    Dejo que el calor evapore un poco el café, el aroma se hace más prominete.
+    <<rateCoffee CoffeeMeter 70>>
+    <<callAudio SoundEffector aguaHirviendo>>
+->Bajar a fuego lento
+    Dejo que las especias suelten su sabor otro rato, que el hervor baje, y que una tenue llama mantenga el calor del recipiente.
+    <<rateCoffee CoffeeMeter 80>>
+->Apagar la llama
+    Suficiente, el café está listo, apago la llama y dejo que la temperatura de mi bebida baje poco a poco.
+    <<rateCoffee CoffeeMeter 65>>
+
+Ahora que todo se han infusionado correctamente, casi está listo para que pueda disfrutarlo.
+<<setOptions OptionButtons 3>>
+[[Lo serviré mi taza favorita|TazaMolido]]
+[[Un vaso será lo más práctico|VasoMolido]]
+[[En este termo se mantendrá caliente|TermoMolido]]
+
+===
+title: TazaMolido
+tags: 
+colorID: 0
+position: 1630,2472
+---
+<<rateCoffee CoffeeMeter 65>>
+<<setImage MainImage tazaVacia>>
+<<set $taza=true>>
+
+Saco mi taza favorita, la admiro como cada mañana, la acerco a la olla donde se infusionó mi café.
+->Cuelo el café
+    <<setImage MainImage tazaLlena>>
+    <<rateCoffee CoffeeMeter 80>>
+    Tomo un colador y lo coloco sobre la taza, con cuidado tomo la olla donde se preparó mi café y lo vierto viendo como los restos del grano agotado por brindarle la escencia a mi bebida se quedan estancados en esa rejilla de plástico.
+->Sirvo el café
+    <<setImage MainImage tazaLlena>>
+    <<rateCoffee CoffeeMeter 90>>
+    Tomo con cuidado la olla donde preparé mi café, lo vierto y observo como los restos del café caen al fondo de mi taza, asegurándose de que mantendrán la escencia que le han estado brindando a mi bebida. 
+<<callAudio SoundEffector vertirAgua>>
+
+Ahora que estña servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Agregar Leche|LecheMolido]]
+[[Sin leche|FrioMolido]]
+
+
+===
+title: VasoMolido
+tags: 
+colorID: 0
+position: 1954,2461
+---
+<<rateCoffee CoffeeMeter 50>>
+<<setImage MainImage unicel>>
+<<set $vaso=true>>
+
+Saco un práctico vaso desechable, la acerco a la olla donde se infusionó mi café.
+->Cuelo el café
+    Tomo un colador y lo coloco en el vaso que a penas parece aguantar su peso, con cuidado tomo la olla donde se preparó mi café y lo vierto viendo como los restos del grano agotado por brindarle la escencia a mi bebida se quedan estancados en esa rejilla de metal.
+->Sirvo el café
+    Tomo con cuidado la olla donde preparé mi café, lo vierto y observo como los restos del café caen al fondo del vaso, asegurándose de que mantendrán la escencia que le han estado brindando a mi bebida. 
+
+<<rateCoffee CoffeeMeter 30>>
+<<callAudio SoundEffector vertirAgua>>
+
+Ahora que está servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Me acerco al refrigerador para buscar leche|LecheMolido]]
+[[Sin leche mantendrá un agradable sabor|FrioMolido]]
+===
+title: TermoMolido
+tags: 
+colorID: 0
+position: 2447,2482
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage thermo>>
+<<set $termo=true>>
+
+Saco un termo que mantendrá el calor de mi bebida por más tiempo, lo acerco a la olla donde se infusionó mi café.
+->Cuelo el café
+    Tomo un colador y lo coloco en la boca del termo, con cuidado tomo la olla donde se preparó mi café y lo vierto viendo como los restos del grano agotado por brindarle la escencia a mi bebida se quedan estancados en esa rejilla de plástico.
+->Sirvo el café
+    Tomo con cuidado la olla donde preparé mi café, lo vierto y observo como los restos del café caen en la oscuridad del termo, asegurándose de que mantendrán la escencia que le han estado brindando a mi bebida. 
+
+<<rateCoffee CoffeeMeter 60>>
+<<callAudio SoundEffector vertirAgua>>
+
+Ahora que esta servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Agregar Leche|LecheMolido]]
+[[Sin leche|FrioMolido]]
+===
+title: LecheMolido
+tags: 
+colorID: 0
+position: 3473,3837
+---
+<<rateCoffee CoffeeMeter 70>>
+<<setImage MainImage refri>>
+
+<<set $leche=true>>
+
+Me acerco al refrigerador a elegir el tipo de leche adecuado para darle una consistencia cremosa a mi ya casi perfecto café.
+<<setOptions OptionButtons 3>>
+->Almendra
+    Aunque me vaya al Bad Place a estar con Chidi, la leche vegetal le da un toque único a mi café.
+    <<rateCoffee CoffeeMeter 60>>
+->Entera
+    La leche tradicional nunca falla, la frescura se impregna en el café y deja una sensación muy notoria de satisfacción
+    <<rateCoffee CoffeeMeter 50>>
+->Deslactosada
+    Más vale que cuide mi estómago, solo un poco de esta leche para pintar mi café de tonos marron para poder disfrutarlo esta mañana.
+    <<rateCoffee CoffeeMeter 10>>
+
+Observo mi café, el color y la cremosa textura son perfectos. 
+
+[[Me acerco a probar mi café|FrioMolido]]
+
+
+
+
+
+===
+title: FrioMolido
+tags: 
+colorID: 0
+position: -28,3176
+---
+<<if $taza=true>>
+
+    <<setImage MainImage tazaLlena>>
+    <<rateCoffee CoffeeMeter 80>> 
+    El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
+    <<setOptions OptionButtons 2>>
+    ->Dejar que se enfríe más 
+        El humo deja de emanar de la taza, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+        <<rateCoffee CoffeeMeter 95>>
+    ->La temperatura está bien
+        <<rateCoffee CoffeeMeter 90>>
+        La temperatura de mi café parece ser la adecuada, llegó el momento de tomar mi café 
+<<endif>>
+
+<<if $vaso=true>>
+    <<setImage MainImage unicel>>
+    <<rateCoffee CoffeeMeter 75>> 
+
+    El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
+    <<setOptions OptionButtons 2>>
+    ->Dejar que se enfríe más 
+        El humo deja de emanar del vaso, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+        <<rateCoffee CoffeeMeter 95>>
+    ->La temperatura está bien
+        <<rateCoffee CoffeeMeter 60>>
+        La temperatura de mi café parece ser la adecuada, llegó el momento de tomar mi café
+<<endif>>
+
+<<if $termo=true>>
+    <<setImage MainImage thermo>>
+    <<rateCoffee CoffeeMeter 70>> 
+
+    La temperatura se mantendrá un rato en mi termo, así que supongo que tal como está es el momento ideal para tomar mi café.
+<<endif>>
+
+[[Dar un sorbo|FinMolido]]
+===
+title: ChecarEspecias
+tags: 
+colorID: 0
+position: 1667,1073
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage alacena>>
+<<if $contador==0>>
+[[Canela|Canela1]]
+[[Clavo|Clavo1]]
+[[Piloncillo|Piloncillo1]]
+<<endif>>
+
+<<if $contador==1>>
+    <<if $canela==true>>
+        <<rateCoffee CoffeeMeter 55>>
+        [[Clavo|Clavo1]]
+        [[Piloncillo|Piloncillo1]]
+        [[Con eso es suficiente, a la estufa|TiempoHervir]]
+    <<endif>>
+    <<if $clavo==true>>
+        <<rateCoffee CoffeeMeter 70>>
+        [[Canela|Canela1]]
+        [[Piloncillo|Piloncillo1]]
+        [[Con el clavo está bien|TiempoHervir]]
+    <<endif>>
+    <<if $piloncillo==true>>
+        <<rateCoffee CoffeeMeter 40>>
+        [[Canela|Canela1]]
+        [[Clavo|Clavo1]]
+        [[El piloncillo es suficiente|TiempoHervir]]
+    <<endif>>
+<<endif>>
+
+<<if $contador==2>>
+    <<if $canela==false>>
+        <<rateCoffee CoffeeMeter 70>>
+        [[Agregar Canela|Canela1]]
+        [[No necesita más|TiempoHervir]]
+    <<endif>>
+    <<if $clavo==false>>
+        <<rateCoffee CoffeeMeter 75>>
+        [[Clavo|Clavo1]]
+        [[Suficiente|TiempoHervir]]
+    <<endif>>
+    <<if $piloncillo==false>>
+        <<rateCoffee CoffeeMeter 75>>
+        [[Piloncillo|Piloncillo1]]
+        [[Con eso está bien|TiempoHervir]]
+    <<endif>>
+<<endif>>
+
+
+===
+title: Canela1
+tags: 
+colorID: 0
+position: 2057,1612
+---
+<<set $canela=true>>
+<<setImage MainImage canela>>
+<<set $contador=$contador+1>>
+Está cerca de la perfección y el intenso sabor de la canela solo lo hará mejor. 
+
+<<if $contador<3>>
+[[¿Debería agregarle otra cosa?|ChecarEspecias]]
+<<else>>
+[[Hora de ponerlo a calentar|TiempoHervir]]
+<<endif>>
+===
+title: Piloncillo1
+tags: 
+colorID: 0
+position: 1668,1645
+---
+<<set $piloncillo=true>>
+<<setImage MainImage piloncillo>>
+<<set $contador=$contador+1>>
+La tradicional dulzura del piloncillo es lo que necesitaba. 
+
+<<if $contador<3>>
+[[¿Debería agregarle otra cosa?|ChecarEspecias]]
+<<else>>
+[[Hora de ponerlo a hervir|TiempoHervir]]
+<<endif>>
+===
+title: Clavo1
+tags: 
+colorID: 0
+position: 1331,1609
+---
+<<set $clavo=true>>
+<<setImage MainImage clavo>>
+<<set $contador=$contador+1>>
+El aroma del clavo complementará perfectamente el sabor de mi café
+
+<<if $contador<3>>
+    [[¿Quizá debería agregar otra cosa|ChecarEspecias]]
+<<else>>
+    [[Debería ponerlo a calentar|TiempoHervir]]
+<<endif>>
+===
+title: Manual
+tags: 
+colorID: 0
+position: 1146,-247
+---
+<<rateCoffee CoffeeMeter 90>>
+<<setImage MainImage molinoManual>>
+Tengo el tiempo y las ganas de tomar mi molino manual y triturar los granos mientras respiran con facilidad.
+Solo tengo que ajustarlo para que quede el tipo de molido que más apetitoso.  
+<<setOptions OptionButtons 3>>
+->Molido Grueso
+    El grano más grueso puede facilitar la preparación. 
+    <<rateCoffee CoffeeMeter 30>>
+->Molido Fino
+    Un grano fino siempre me deja el sabor para todo el día.
+    <<rateCoffee CoffeeMeter 40>>
+->Molido Extra Fino
+    Por este sabor no me importa despertar temprano. 
+    <<rateCoffee CoffeeMeter 40>>
+
+Ya quedó justo como quería, debo decidir ¿con qué voy a preparar mi café?
+<<setOptions OptionButtons 3>>
+[[Cafetera|Cafetera]]
+[[Olla|Olla]]
+[[Prensa Francesa|Prensa]]
+===
+title: Electrico
+tags: 
+colorID: 0
+position: 2695,99
+---
+<<rateCoffee CoffeeMeter 25>>
+<<setImage MainImage molinoElectrico>>
+La eficacia de este molino no disminuye la calidad de los granos que está triturando, en cuanto lo destapo el aroma de los granos recién triturados se hace presente. 
+Ahora, debo decidir de qué manera aprovechare la tersa consistencia de mi café. 
+<<setOptions OptionButtons 3>>
+[[Cafetera|Cafetera]]
+[[Olla|Olla]]
+[[Prensa Francesa|Prensa]]
+===
+title: TermoPrensa
+tags: 
+colorID: 0
+position: 3347,983
+---
+<<rateCoffee CoffeeMeter 60>>
+<<setImage MainImage thermo>>
+<<set $termo=true>>
+
+Saco un termo que mantendrá el calor de mi bebida por más tiempo, le acerco a la prensa donde se infusionó mi café.
+Tomo con cuidado la prensa, vierto el líquido y observo como el café cae en la oscuridad del termo, asegurándome de que mantendrán el calor de mi bebida por cuanto sea necesario.
+
+<<rateCoffee CoffeeMeter 60>>
+
+Ahora que esta servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Agregar Leche|LecheMolido]]
+[[Sin leche|FrioMolido]]
+===
+title: TazaPrensa
+tags: 
+colorID: 0
+position: 4230,912
+---
+<<rateCoffee CoffeeMeter 65>>
+<<setImage MainImage tazaVacia>>
+<<set $taza=true>>
+
+Saco mi taza favorita, la admiro como cada mañana, la acerco a la prensa donde se infusionó mi café.
+
+<<setImage MainImage tazaLlena>>
+Tomo la prensa, vierto el café y observo como el líquido obscuro va llenando mi taza.
+
+<<rateCoffee CoffeeMeter 60>>
+
+Ahora que está servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Agregar Leche|LecheMolido]]
+[[Sin leche|FrioMolido]]
+===
+title: VasoPrensa
+tags: 
+colorID: 0
+position: 3795,913
+---
+<<rateCoffee CoffeeMeter 50>>
+<<setImage MainImage unicel>>
+<<set $vaso=true>>
+
+Saco un práctico vaso desechable.
+Tomo con cuidado la prensa donde preparé mi café, vierto el líquido y observo como los restos del café caen al fondo del vaso. 
+No es la mejor presentación, pero sí el mejor sabor.
+
+<<rateCoffee CoffeeMeter 30>>
+
+Ahora que está servido, quizá deba agregar un poco de leche.
+<<setOptions OptionButtons 2>>
+[[Me acerco al refrigerador para buscar leche|LecheMolido]]
+[[Sin leche mantendrá un agradable sabor|FrioMolido]]
+===
+title: Instantaneo
+tags: 
+colorID: 0
+position: -106,-574
+---
+<<rateCoffee CoffeeMeter 15>>
+<<setImage MainImage soluble>>
+<<callAudio SoundEffector pop>>
+Tomo el recipiente de cristal y lo abro.
+Emana un aroma agradable. 
+Una vez que leo las instrucciones por enésima vez, tengo que decidir con qué lo voy a preparar.
+<<setOptions OptionButtons 2>>
+[[Agua|AguaInsta]]
+[[Leche|LecheInsta]]
+===
+title: LecheInsta
+tags: 
+colorID: 0
+position: -988,-309
+---
+<<rateCoffee CoffeeMeter 20>>
+<<setImage MainImage refri>>
+<<set $leche=true>>
+Abro el refrigeredor para elegir qué leche usaré mi café.
+<<setOptions OptionButtons 3>>
+->Entera
+    Entera, me recuerda al café que me preparaban cuando era jóven.
+    <<rateCoffee CoffeeMeter 25>>
+->Deslactosada
+    Deslactosada, más vale, no quiero que me cause estragos que puedan terminar en una situación incómoda.
+    <<rateCoffee CoffeeMeter 30>>
+->Almendra
+    Almendra, el peculiar sabor de la leche vegetal vendría bien.
+    <<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage leche>>
+<<rateCoffee CoffeeMeter 30>>
+Definitivamente la mejor elección, ahora ¿cómo debería hacer que mi café alcance la la temperatura ideal?
+<<setOptions OptionButtons 2>>
+[[Microondas|MicroInsta]]
+[[Estufa|EstufaInsta]]
+===
+title: AguaInsta
+tags: 
+colorID: 0
+position: -272,-211
+---
+<<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage agua>>
+<<callAudio SoundEffector vertir>>
+<<set $agua=true>>
+El agua es la mejor manera de infusionar el verdadero sabor del café que me estoy preparando, pero ¿en dónde debería calentarla?
+<<setOptions OptionButtons 2>>
+[[Microondas|MicroInsta]]
+[[Estufa|EstufaInsta]]
+===
+title: MicroInsta
+tags: 
+colorID: 0
+position: -597,193
+---
+<<rateCoffee CoffeeMeter 25>>
+<<setImage MainImage microondas>>
+
+La practicidad y la rapidez de mi horno de microondas es lo que necesito para el control de la temperatura ideal, y así podré disfrutar más rápido de mi café.
+Ahora la pregunta es ¿Cuánto tiempo debería ponerle al microondas? 
+
+<<setOptions OptionButtons 3>>
+[[1 minuto|TiempoMicroInsta]]
+[[3 minutos|TiempoMicroInsta]]
+[[5 minutos|TiempoMicroInsta]]
+===
+title: TiempoMicroInsta
+tags: 
+colorID: 0
+position: -1486,182
+---
+<<rateCoffee CoffeeMeter 30>>
+<<setImage MainImage microondas>>
+<<if $vaso is true>>
+    Parte de este proceso es esperar, no puedo pensar en otra cosa que no sea mi café mientras veo ese vaso girar.
+<<endif>>
+
+<<if $taza is true>>
+    Siempre disfruto ver mi taza favorita girar, hace la espera más corta, siento que ese osito me busca y me encuentra en cada giro que da, mientras yo pienso en mi café.
+<<endif>>
+
+<<CallAudio SoundEffector Microondas>>
+De repente la luz se apaga y los tres bips suenan, es la hora de la verdad. 
+
+[[Escoger recipiente|Recipiente]]
+===
+title: CucharadasInsta
+tags: 
+colorID: 0
+position: -1165,986
+---
+<<rateCoffee CoffeeMeter 70>>
+<<setImage MainImage cuchara>>
+<<callAudio SoundEffector cuchara>>
+Tomo la cuchara, escudriño con la intención de encontrar el montículo de partículas de café más apetitosas.
+<<if $agua=true>>
+    Por supuesto esa será la primera cucharada, tomo con la espectativa de haber elegido las correctas, meto la cuchara y su contenido al agua y veo cómo se disuelven con sutileza.
+<<endif>>
+<<if $leche=true>>
+    Es la imagen perfecta, tomo la cuchara y revuelvo el café con la leche generando una consistencia ligeramente espumosa. 
+<<endif>>
+
+Olfateo mi bebida, está casi lista, pero no sé si ponerle más café...
+<<setOptions OptionButtons 2>>
+->Otra cucharada
+    Tomo la cuchara y repito el proceso, la consistencia del café se hace más robusta, el aroma más penetrante. 
+    <<rateCoffee CoffeeMeter 65>>
+->Está listo
+    No necesita más, esa cucharada era la única necesaria para forjar el café que necesito. 
+    <<rateCoffee CoffeeMeter 75>>
+
+El aroma de mi café me llama, ya quiero probarlo, pero desde la alacena me coquetea algo.
+Los diferentes tipos de endulzantes me llaman la atención ¿Debería endulzar mi café? 
+
+[[Un poco de dulzura no me caería mal para empezar el día|AzucarInsta]]
+[[Negro y amargo, como dicen que debe ser|TiempoInsta]]
+===
+title: EstufaInsta
+tags: 
+colorID: 0
+position: -601,585
+---
+<<rateCoffee CoffeeMeter 45>>
+<<setImage MainImage estufa>>
+<<callAudio SoundEffector estufa>>
+<<if $agua=true>>
+    Vierto el agua en un posillo y enciendo la estufa, espero con un deseo vehemente que suelte hervor, poco a poco las burbujas se hacen visibles desde el fondo del recipiente, de repente. 
+    <<callAudio SoundEffector aguahirviendo>>
+    Las burbujas brotan.
+<<endif>>
+
+<<if $leche=true>>
+    La leche se calienta
+    <<callAudio SoundEffector lechehirviendo>>
+    El olor no es muy agradable, pero sé que todo vale la pena para complementar los ingredientes que le darán vida a mi café.
+<<endif>>
+
+Llegó la hora de la verdad. 
+
+[[Escoger recipiente|Recipiente]]
+===
+title: AzucarInsta
+tags: 
+colorID: 0
+position: -1507,1122
+---
+<<setImage MainImage alacena>>
+<<callAudio SoundEffector alacena>>
+Junto al café molido y el café en grano está el azúcar, un edulcorante que me regalaron y...
+Miel, definitivamente todas excelentes opciones para optimizar el sabor de mi café.
+<<setOptions OptionButtons 3>>
+->Azúcar
+    <<setImage MainImage azucarera>>
+    Un clásico que nunca falla en activar mis papilas gustativas y darme un pequeño empuje de enrgía para empezar el día.
+    <<rateCoffee CoffeeMeter 60>>
+->Edulcorante
+    <<setImage MainImage splendid>>
+    Bueno, seguramente la persona que me lo regaló querrá saber mi opinión, y si se preocupó por mí es un buen momento para probar estos sobrcitos amarillos.
+    <<rateCoffee CoffeeMeter 45>>
+->Miel
+    <<setImage MainImage miel>>
+    Una opción natural que resalta el sabor de cualquier cosa, incluyendo mi café.
+    <<rateCoffee CoffeeMeter 70>>
+
+Revuelvo todos los ingredientes, mi café está listo.
+
+[[Me acerco a darle un sorbo|TiempoInsta]]
+===
+title: TiempoInsta
+tags: 
+colorID: 0
+position: -1222,1384
+---
+<<rateCoffee CoffeeMeter 90>>
+<<if $taza==true>>
+    <<setImage MainImage tazaLlena>>
+<<endif>>
+<<if $vaso==true>>
+    <<setImage MainImage unicel>>
+<<endif>>
+Pero, tal vez está muy caliente, quizá debería dejar que se enfríe un poco.
+<<setOptions OptionButtons 2>>
+[[Dejar que se enfríe|FrioInsta]]
+[[Tomarlo caliente|FinInsta]]
+===
+title: FinInsta
+tags: 
+colorID: 0
+position: -521,1539
+---
+<<rateCoffee CoffeeMeter 100>>
+<<if $recipiente==1>>
+    <<setImage MainImage tazaLlena>>
+    Acerco mi taza favorita a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
+<<endif>>
+
+<<if $recipiente==0>>
+    <<setImage MainImage unicel>>
+    Acerco mi vaso de unicel a mis labios y le doy un sorbo al mejor café que he preparado, el sabor, la consistencia, todo es perfecto.
+<<endif>>
+
+No hay mejor manera de empezar el día, que tomando en tu café favorito en tu hogar.
+===
+title: FrioInsta
+tags: 
+colorID: 0
+position: -1387,2069
+---
+<<rateCoffee CoffeeMeter 80>> 
+
+Más vale que llegue a la temperatura ideal, que el aroma inunde el espacio, puedo esperar otro rato.
+
+El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
+<<setOptions OptionButtons 2>>
+->Dejar que se enfríe más 
+    <<if $recipiente==1>> 
+    <<setImage MainImage tazaLlena>>
+        El humo deja de amanar de la taza, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+        <<rateCoffee CoffeeMeter 35>>
+    <<endif>>
+    <<if $recipiente==0>>
+    <<setImage MainImage unicel>>
+        El humo deja de amanar del vaso, pero el color se ve mejor, la estabilidad de mi café me llena de paz.
+        <<rateCoffee CoffeeMeter 40>>
+    <<endif>>
+->La temperatura está bien
+    <<rateCoffee CoffeeMeter 68>>
+    La temperatura de mi café parece ser la adecuada, llegó el momento de tomar mi café 
+
+[[Dar un sorbo|FinInsta]]
+===
+title: Recipiente
+tags: 
+colorID: 0
+position: -1096,674
+---
+¿Qué recipiente será el adecuado para esta gloriosa bebida?
+
+->Usaré un vaso de unicel
+    <<setImage MainImage unicel>>    
+    Este vaso será suficiente para concentrar el calor del café.
+    <<set $recipiente = 0>>
+->Usaré mi taza favorita
+    <<setImage MainImage tazaVacia>>
+    Mi taza de perrito nunca falla en mantener la consistencia y calor.
+    <<set $recipiente = 1>>
+    
+
+<<rateCoffee CoffeeMeter 35>>
+
+[[A lo que sigue|CucharadasInsta]]
+===

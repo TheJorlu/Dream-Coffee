@@ -827,6 +827,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 28ea1ed6856e543ba8653a4ed41ed1aa, type: 3}
   - name: vertirAgua
     clip: {fileID: 8300000, guid: 0a77dbf3eba93433db768ee9e7b5f6a4, type: 3}
+  - name: logro
+    clip: {fileID: 8300000, guid: 3638447e49c1c0f43b4f4d41ccdf36d6, type: 3}
 --- !u!82 &348903765
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2898,7 +2900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceText:
-  - {fileID: 4900000, guid: 98be8bb15d0ef47518a67f4eec594ca4, type: 3}
+  - {fileID: 4900000, guid: 429a895adada70744a22bce5f4b4b6bf, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
