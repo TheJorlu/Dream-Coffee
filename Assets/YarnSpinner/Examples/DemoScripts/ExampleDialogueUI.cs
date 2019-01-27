@@ -71,6 +71,8 @@ namespace Yarn.Unity.Example {
         /// dialogue is active and to restore them when dialogue ends
         public RectTransform gameControlsContainer;
 
+        public bool optionsActive;
+
         void Awake ()
         {
             // Start by hiding the container, line and option buttons
@@ -135,6 +137,8 @@ namespace Yarn.Unity.Example {
         public override IEnumerator RunOptions (Yarn.Options optionsCollection, 
                                                 Yarn.OptionChooser optionChooser)
         {
+            optionsActive = true;
+
             // Do a little bit of safety checking
             if (optionsCollection.options.Count > optionButtons.Count) {
                 Debug.LogWarning("There are more options to present than there are" +
@@ -158,13 +162,15 @@ namespace Yarn.Unity.Example {
                 yield return null;
             }
 
+            optionsActive = false;
+
             // Hide all the buttons
             foreach (var button in optionButtons) {
                 StartCoroutine(DissappearButtons());
             }
         }
 
-        IEnumerator DissappearButtons()
+        public IEnumerator DissappearButtons()
         {
             foreach (var button in optionButtons)
             {

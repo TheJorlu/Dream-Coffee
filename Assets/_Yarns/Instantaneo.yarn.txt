@@ -1,7 +1,7 @@
 title: ¡Buenos días!
 tags: 
 colorID: 0
-position: 1676,-281
+position: 1676,-283
 ---
 <<rateCoffee CoffeeMeter 0>>
 <<setImage MainImage sol>>
@@ -11,6 +11,7 @@ Después de una reconfortante noche de sueño me despierto con la emoción de pr
 Me levanto y voy a la cocina
 Mi ritual mañanero es tan emocionante como siempre, me acerco a la alacena y la abro para elegir el tipo de café que me voy a preparar
 <<setOptions OptionButtons 3>>
+<<startTimer DialogueRunner Indecision>>
 [[Café Instantáneo|Instantaneo]]
 [[Café Molido|Molido]]
 [[Café en Grano|Grano]]
@@ -281,4 +282,11 @@ El aroma llena la habitación, quizá debería dejarlo enfriar otro rato.
 
 [[Dar un sorbo|FinInsta]]
     
+===
+title: Indecision
+tags: 
+colorID: 0
+position: 1693,-618
+---
+Chale, no se como me gusta el café
 ===

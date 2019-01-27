@@ -2535,8 +2535,9 @@ GameObject:
   - component: {fileID: 1622953262}
   - component: {fileID: 1622953261}
   - component: {fileID: 1622953264}
+  - component: {fileID: 1622953265}
   m_Layer: 0
-  m_Name: Dialogue
+  m_Name: DialogueRunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2564,6 +2565,7 @@ MonoBehaviour:
   - {fileID: 1172999582}
   - {fileID: 1578909815}
   gameControlsContainer: {fileID: 0}
+  optionsActive: 0
 --- !u!114 &1622953262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,6 +2616,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultVariables: []
   debugTextView: {fileID: 0}
+--- !u!114 &1622953265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622953260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0abb57ebdcbb46f1ac7b25ec013a5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToWait: 10
 --- !u!1 &1718334845
 GameObject:
   m_ObjectHideFlags: 0
