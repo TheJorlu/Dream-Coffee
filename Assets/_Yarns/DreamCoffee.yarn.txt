@@ -53,7 +53,7 @@ position: 2222,578
 Las posibilidades que me brinda este método de preparación son infinitas...
 
 ¿Le debería poner especias que complementen el sabor del café?
-<<setOptions OptionButtons 2>>
+<<setOptions OptionButtons 3>>
 <<set $contador=0>>
 [[Me acerco a la alacena|ChecarEspecias]]
 [[Me voy a la estufa|TiempoHervir]]
@@ -557,29 +557,27 @@ tags:
 colorID: 0
 position: 1667,1073
 ---
-<<rateCoffee CoffeeMeter 60>>
 <<setImage MainImage alacena>>
+Hmmm...
 <<if $contador==0>>
-[[Canela|Canela1]]
-[[Clavo|Clavo1]]
-[[Piloncillo|Piloncillo1]]
+    
+    [[Canela|Canela1]]
+    [[Clavo|Clavo1]]
+    [[Piloncillo|Piloncillo1]]
 <<endif>>
 
 <<if $contador==1>>
     <<if $canela==true>>
-        <<rateCoffee CoffeeMeter 55>>
         [[Clavo|Clavo1]]
         [[Piloncillo|Piloncillo1]]
         [[Con eso es suficiente, a la estufa|TiempoHervir]]
     <<endif>>
     <<if $clavo==true>>
-        <<rateCoffee CoffeeMeter 70>>
         [[Canela|Canela1]]
         [[Piloncillo|Piloncillo1]]
         [[Con el clavo está bien|TiempoHervir]]
     <<endif>>
     <<if $piloncillo==true>>
-        <<rateCoffee CoffeeMeter 40>>
         [[Canela|Canela1]]
         [[Clavo|Clavo1]]
         [[El piloncillo es suficiente|TiempoHervir]]
@@ -588,17 +586,14 @@ position: 1667,1073
 
 <<if $contador==2>>
     <<if $canela==false>>
-        <<rateCoffee CoffeeMeter 70>>
         [[Agregar Canela|Canela1]]
         [[No necesita más|TiempoHervir]]
     <<endif>>
     <<if $clavo==false>>
-        <<rateCoffee CoffeeMeter 75>>
         [[Clavo|Clavo1]]
         [[Suficiente|TiempoHervir]]
     <<endif>>
     <<if $piloncillo==false>>
-        <<rateCoffee CoffeeMeter 75>>
         [[Piloncillo|Piloncillo1]]
         [[Con eso está bien|TiempoHervir]]
     <<endif>>
