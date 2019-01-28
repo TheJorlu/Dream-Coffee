@@ -426,7 +426,7 @@ Saco mi taza favorita, la admiro como cada mañana, la acerco a la olla donde se
     Tomo con cuidado la olla donde preparé mi café, lo vierto y observo como los restos del café caen al fondo de mi taza, asegurándose de que mantendrán la escencia que le han estado brindando a mi bebida. 
 <<callAudio SoundEffector vertirAgua>>
 
-Ahora que estña servido, quizá deba agregar un poco de leche.
+Ahora que está servido, quizá deba agregar un poco de leche.
 <<setOptions OptionButtons 2>>
 [[Agregar Leche|LecheMolido]]
 [[Sin leche|FrioMolido]]
